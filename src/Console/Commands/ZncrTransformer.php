@@ -45,7 +45,7 @@ class ZncrTransformer extends Command
             $fillableDisplay .= "\t\t\t" . "'" . $fillableItem . "' => " . $modelInstance . "->" . $fillableItem . "," . ($key != (count($fillables) - 1) ? "\r\n" : "");
         }
 
-        $fileContent = file_get_contents(app_path('Console/Commands/stubs/zncr-transformer.stub'));
+        $fileContent = file_get_contents(__DIR__ . '/../stubs/zncr-transformer.stub');
 
         $fileContent = str_replace('DummyNamespace', 'App\Transformers', $fileContent);
         $fileContent = str_replace('DummyModelPath', substr($model, 0, 1) == "\\" ? substr($model, 1) : $model, $fileContent);

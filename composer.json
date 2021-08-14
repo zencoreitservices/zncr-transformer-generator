@@ -1,5 +1,5 @@
 {
-    "name": "domin1992/zncr-transformer-generator",
+    "name": "zencoreitservices/zncr-transformer-generator",
     "description": "This is extension package for spatie/laravel-fractal. Creates transformer with properties from models $fillable property.",
     "license": "MIT",
     "authors": [

@@ -3,6 +3,7 @@
 namespace ZncrTransformerGenerator;
 
 use Illuminate\Support\ServiceProvider;
+use ZncrTransformerGenerator\Console\Commands\ZncrTransformer;
 
 class ZncrTransformerGeneratorProvider extends ServiceProvider
 {
@@ -11,11 +12,9 @@ class ZncrTransformerGeneratorProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->setupConfig();
-
         if ($this->app->runningInConsole()) {
             $this->commands([
-                TransformerMakeCommand::class,
+                ZncrTransformer::class,
             ]);
         }
     }
